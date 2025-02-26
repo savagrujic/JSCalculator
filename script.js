@@ -24,57 +24,133 @@ function DodajBroj(n) {
 function ObrisiSve() {
     inputbox.value = ''
 }
+ dalisamkliknojednako = false
 function izracunaj() {
     let x = inputbox.value
     y = eval(x)
-    inputbox.value = y
+    inputbox.value ='Answer: '+ y
+    dalisamkliknojednako = true
+   
 }
 
 button1.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+         inputbox.value = ''
+         dalisamkliknojednako = false
+    }
     DodajBroj(1)
 })
 button2.addEventListener('click', function() {
-    DodajBroj(2)
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+   DodajBroj(2)
 })
 button3.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(3)
 })
 button4.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(4)
 })
 button5.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(5)
 })
 button6.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(6)
 })
 button7.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(7)
 })
 button8.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(8)
 })
 button9.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(9)
 })
 button0.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj(0)
 })
 
 
 deljenje.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj('/')
 })
 mnozenje.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj('*')
 })
 sabiranje.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj('+')
 })
 oduzimanje.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     DodajBroj('-')
 })
 jednako.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+
     izracunaj()
 })
 
@@ -85,4 +161,19 @@ jednako.addEventListener('click', function() {
 
 c.addEventListener('click', function() {
     ObrisiSve()
+})
+
+brisanje.addEventListener('click', function() {
+    if(dalisamkliknojednako) {
+        inputbox.value = ''
+        dalisamkliknojednako = false
+   }
+    let string = inputbox.value
+    obrisani = string.substring(0,string.length-1)
+    inputbox.value = obrisani
+})
+
+inputbox.addEventListener('keydown', function(e) {
+    e.preventDefault()
+    return false
 })
